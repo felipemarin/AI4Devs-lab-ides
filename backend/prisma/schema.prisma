@@ -18,3 +18,86 @@ model User {
   email String  @unique
   name  String?
 }
+
+model Candidate {
+  id            Int             @id @default(autoincrement())
+  firstName     String
+  lastName      String
+  email         String          @unique
+  phone         String?
+  birthDate     DateTime?
+  location      String?
+  resumeUrl     String?
+  resumeFile    String?
+  createdAt     DateTime        @default(now())
+  updatedAt     DateTime        @updatedAt
+  status        ApplicationStatus @default(NEW)
+  notes         String?
+  
+  // Relaciones
+  workExperiences WorkExperience[]
+  education      Education[]
+  skills         Skill[]
+  languages      Language[]
+}
+
+model WorkExperience {
+  id          Int       @id @default(autoincrement())
+  company     String
+  position    String
+  startDate   DateTime
+  endDate     DateTime?
+  description String?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  
+  // Relación con Candidato
+  candidate   Candidate @relation(fields: [candidateId], references: [id])
+  candidateId Int
+}
+
+model Education {
+  id          Int       @id @default(autoincrement())
+  institution String
+  degree      String
+  field       String
+  startDate   DateTime
+  endDate     DateTime?
+  description String?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  
+  // Relación con Candidato
+  candidate   Candidate @relation(fields: [candidateId], references: [id])
+  candidateId Int
+}
+
+model Skill {
+  id          Int       @id @default(autoincrement())
+  name        String    @unique
+  category    String?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  
+  // Relación con Candidato
+  candidates  Candidate[]
+}
+
+model Language {
+  id          Int       @id @default(autoincrement())
+  name        String    @unique
+  level       String    // A1, A2, B1, B2, C1, C2, Native
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  
+  // Relación con Candidato
+  candidates  Candidate[]
+}
+
+enum ApplicationStatus {
+  NEW
+  REVIEWING
+  IN_PROCESS
+  REJECTED
+  HIRED
+}

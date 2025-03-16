@@ -2,11 +2,17 @@ version: "3.1"
 
 services:
   db:
-    image: postgres
+    image: postgres:latest
     restart: always
     environment:
       POSTGRES_PASSWORD: D1ymf8wyQEGthFR1E9xhCq
       POSTGRES_USER: LTIdbUser
       POSTGRES_DB: LTIdb
+      POSTGRES_HOST_AUTH_METHOD: trust
     ports:
-      - 5432:5432
+      - 5433:5432
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:

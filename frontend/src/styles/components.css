@@ -1,0 +1,659 @@
+/* Candidate List */
+.candidate-list {
+  padding: 20px;
+}
+
+.candidate-list table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.candidate-list th,
+.candidate-list td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.candidate-list th {
+  background-color: #f5f5f5;
+  font-weight: 600;
+}
+
+.candidate-list tr:hover {
+  background-color: #f9f9f9;
+}
+
+.candidate-list .actions {
+  display: flex;
+  gap: 8px;
+}
+
+/* Candidate Form */
+.candidate-form {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-section {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.form-section:last-child {
+  margin-bottom: 0;
+}
+
+.form-section h3 {
+  margin-bottom: 1rem;
+  color: #374151;
+  font-size: 1.25rem;
+  font-weight: 600;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.form-section h4 {
+  margin-bottom: 1rem;
+  color: #374151;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #374151;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
+}
+
+.form-group textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+/* Botones */
+.add-button {
+  background-color: #3b82f6;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.add-button:hover {
+  background-color: #2563eb;
+}
+
+.edit-button {
+  background-color: #3b82f6;
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.edit-button:hover {
+  background-color: #2563eb;
+}
+
+.delete-button {
+  background-color: #ef4444;
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.delete-button:hover {
+  background-color: #dc2626;
+}
+
+/* Botones principales del formulario */
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.form-actions button[type="submit"] {
+  background-color: #3b82f6;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.form-actions button[type="submit"]:hover {
+  background-color: #2563eb;
+}
+
+.form-actions button[type="button"] {
+  background-color: #e5e7eb;
+  color: #374151;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.form-actions button[type="button"]:hover {
+  background-color: #d1d5db;
+}
+
+/* Lista de items */
+.items-list {
+  margin-top: 1rem;
+}
+
+.experience-item,
+.education-item,
+.skill-item,
+.language-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1rem;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+
+.experience-item:last-child,
+.education-item:last-child,
+.skill-item:last-child,
+.language-item:last-child {
+  margin-bottom: 0;
+}
+
+.experience-content,
+.education-content {
+  flex: 1;
+}
+
+.experience-content h4,
+.education-content h4 {
+  margin: 0;
+  color: #111827;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.company,
+.institution {
+  color: #4b5563;
+  font-size: 0.875rem;
+  margin: 0.25rem 0;
+}
+
+.field {
+  color: #6b7280;
+  font-size: 0.875rem;
+  margin: 0.25rem 0;
+}
+
+.date {
+  color: #6b7280;
+  font-size: 0.875rem;
+  margin: 0.25rem 0;
+}
+
+.description {
+  color: #4b5563;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+}
+
+.experience-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-left: 1rem;
+}
+
+.skills-list,
+.languages-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skill-tag {
+  background-color: #e5e7eb;
+  color: #374151;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+}
+
+.language-name {
+  font-weight: 500;
+  color: #111827;
+}
+
+.language-level {
+  color: #6b7280;
+  margin-left: 0.25rem;
+}
+
+/* Separador de secciones */
+.form-section-divider {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.section-header h3 {
+  margin: 0;
+  color: #374151;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+/* Status Badges */
+.status-badge {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.status-NEW {
+  background-color: #e3f2fd;
+  color: #1976d2;
+}
+
+.status-REVIEWING {
+  background-color: #fff3e0;
+  color: #f57c00;
+}
+
+.status-IN_PROCESS {
+  background-color: #e8f5e9;
+  color: #388e3c;
+}
+
+.status-REJECTED {
+  background-color: #ffebee;
+  color: #d32f2f;
+}
+
+.status-HIRED {
+  background-color: #f3e5f5;
+  color: #7b1fa2;
+}
+
+/* Loading and Error States */
+.loading,
+.error {
+  text-align: center;
+  padding: 20px;
+}
+
+.error {
+  color: #d32f2f;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .candidate-form {
+    padding: 10px;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .form-actions button {
+    width: 100%;
+  }
+
+  .candidate-detail {
+    padding: 15px;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.education-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: #f8fafc;
+  padding: 15px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  border-left: 4px solid #4299e1;
+}
+
+.education-content {
+  flex: 1;
+  margin-right: 15px;
+}
+
+.education-content h4 {
+  margin: 0 0 8px 0;
+  color: #2d3748;
+  font-size: 1.1em;
+}
+
+.education-content .institution {
+  color: #4a5568;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.education-content .field {
+  color: #4a5568;
+  margin-bottom: 4px;
+}
+
+.education-content .date {
+  color: #718096;
+  font-size: 0.9em;
+  margin-bottom: 8px;
+}
+
+.education-content .description {
+  color: #4a5568;
+  font-size: 0.95em;
+  line-height: 1.5;
+}
+
+/* Lista de candidatos */
+.candidates-list {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.candidates-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.candidates-header h2 {
+  margin: 0;
+  color: #111827;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.candidates-actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.candidates-actions button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.candidates-actions button.create {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.candidates-actions button.create:hover {
+  background-color: #2563eb;
+}
+
+.candidates-actions button.edit {
+  background-color: #3b82f6;
+  color: white;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+}
+
+.candidates-actions button.edit:hover {
+  background-color: #2563eb;
+}
+
+.candidates-actions button.delete {
+  background-color: #ef4444;
+  color: white;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+}
+
+.candidates-actions button.delete:hover {
+  background-color: #dc2626;
+}
+
+.candidates-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.candidates-table th,
+.candidates-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.candidates-table th {
+  background-color: #f9fafb;
+  font-weight: 600;
+  color: #374151;
+}
+
+.candidates-table tr:last-child td {
+  border-bottom: none;
+}
+
+.candidates-table tr:hover {
+  background-color: #f9fafb;
+}
+
+.candidate-status {
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.candidate-status.NEW {
+  background-color: #e5e7eb;
+  color: #374151;
+}
+
+.candidate-status.REVIEWING {
+  background-color: #dbeafe;
+  color: #1e40af;
+}
+
+.candidate-status.IN_PROCESS {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.candidate-status.REJECTED {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.candidate-status.HIRED {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.app-header {
+  background-color: #f8f9fa;
+  padding: 1rem;
+  border-bottom: 1px solid #dee2e6;
+  text-align: center;
+}
+
+.app-header h1 {
+  margin: 0;
+  color: #333;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.resume-link {
+  display: inline-block;
+  color: #2563eb;
+  text-decoration: none;
+  font-size: 0.875rem;
+  padding: 0.5rem 0;
+}
+
+.resume-link:hover {
+  text-decoration: underline;
+}
+
+.search-container {
+  position: relative;
+}
+
+.search-input {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  width: 300px;
+  transition: border-color 0.2s ease;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.search-input::placeholder {
+  color: #999;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.suggestions-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-top: 4px;
+  padding: 0;
+  list-style: none;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.suggestions-list li {
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.suggestions-list li:hover {
+  background-color: #f5f5f5;
+}
+
+.resume-icon {
+  display: inline-block;
+  font-size: 1.2em;
+  text-decoration: none;
+  color: #2c3e50;
+  transition: transform 0.2s ease;
+}
+
+.resume-icon:hover {
+  transform: scale(1.2);
+  color: #3498db;
+} 
