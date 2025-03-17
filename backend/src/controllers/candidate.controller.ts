@@ -39,6 +39,7 @@ const upload = multer({
 
 export class CandidateController {
   public upload = upload;
+  private candidateService: CandidateService;
 
   constructor() {
     this.candidateService = new CandidateService();
@@ -314,7 +315,11 @@ export class CandidateController {
       const candidate = await this.candidateService.createCandidate(candidateData);
       res.status(201).json(candidate);
     } catch (error) {
-      res.status(400).json({ message: error.message });
+      console.error('Error creating candidate:', error);
+      res.status(400).json({ 
+        error: 'Error creating candidate',
+        details: error instanceof Error ? error.message : 'Unknown error'
+      });
     }
   }
 
@@ -328,7 +333,10 @@ export class CandidateController {
       const candidate = await this.candidateService.updateCandidate(Number(id), candidateData);
       res.json(candidate);
     } catch (error) {
-      res.status(400).json({ message: error.message });
+      res.status(400).json({ 
+        error: 'Error updating candidate',
+        details: error instanceof Error ? error.message : 'Unknown error'
+      });
     }
   }
 
